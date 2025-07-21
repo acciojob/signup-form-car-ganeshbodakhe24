@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<title>Registration Form</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<form method='post'>
-		<label for="name">Name</label>
-		<input type="text" required id="name" placeholder="Name">
-		<br>
-		<label for="Email">Email</label>
-		<input type="email" required id="email" placeholder="Email">
-		<br>
-		<label for="gender">Gender</label><br>
-		<label for="gender_m">Male</label>
-		<input name='gender' type="radio" value="gender_m" id="gender_m">
-		<label for="gender_f">Female</label>
-		<input name="gender" type="radio" value="gender_f" id="gender_f">
-		<br>
-		<label for="cars">Car Brand</label>
-		<select name="cars" id="cars" required >
-			<option value="--please choose an option--">--please choose an option--</option>
-			<option value="bugati">Bugati</option>
-		</select>
-		<br>
-		<label for="age">Age</label>
-		<input type="number" required id="age" placeholder="Age">
-		<br>
-		<label for="dob">DOB</label>
-		<input type="date" id="dob" required>
-		<br>
-		<label for="tel">Pnone number</label>
-		<input type="tel" id="tel" placeholder="xxx-xxx-xxxx">
-		<br>
-		<label for="password">Password</label>
-		<input type="password" required id="password" placeholder="passwordd">
-		<br>
-		<label for="tos" >I agree to the TOS</label>
-		<input type="checkbox" required id="tos">
-		
+	<div class="container">
+		<h2>Registration Form</h2>
+		<form method="post">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" required placeholder="Name">
 
-	</form>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" required placeholder="Email">
 
+			<label>Gender</label>
+			<div class="gender-options">
+				<label for="gender_m"><input name="gender" type="radio" value="male" id="gender_m"> Male</label>
+				<label for="gender_f"><input name="gender" type="radio" value="female" id="gender_f"> Female</label>
+			</div>
+
+			<label for="cars">Car Brand</label>
+			<select name="cars" id="cars" required>
+				<option value="">--please choose an option--</option>
+				<option value="bugatti">Bugatti</option>
+				<option value="tesla">Tesla</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select>
+
+			<label for="age">Age</label>
+			<input type="number" name="age" id="age" required placeholder="Age">
+
+			<label for="dob">Date of Birth</label>
+			<input type="date" name="dob" id="dob" required>
+
+			<label for="tel">Phone Number</label>
+			<input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" required placeholder="Password">
+
+			<label><input type="checkbox" name="tos" id="tos" required> I agree to the Terms of Service</label>
+
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
 </body>
-	
-
 </html>
