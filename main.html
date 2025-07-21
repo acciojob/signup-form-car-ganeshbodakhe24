@@ -7,10 +7,46 @@
 </head>
 
 <body>
+	<form method='post'>
+		<label for="name">name</label>
+		<input type="text" required id="name" placeholder="Name">
+		<br>
+		<label for="Email">Email</label>
+		<input type="email" required id="email" placeholder="Email">
+		<br>
+		<label for="gender">gender</label><br>
+		<label for="gender_m"></label>
+		<input name='gender' type="radio" value="gender_m" id="gender_m">
+		<label for="gender_f"></label>
+		<input name="gender" type="radio" value="gender_f" id="gender_f">
+		<br>
+		<label for="cars">Car Brand</label>
+		<select name="cars" id='cars' required >
+			<option value="--please choose an option--"></option>
+			<option value="bugati"></option>
+		</select>
+		<br>
+		<label for="age">age</label>
+		<input type="number" required id="age" placeholder="Age">
+		<br>
+		<label for="dob">DOB</label>
+		<input type="date" id="dob" required>
+		<label for="tel">pnone number</label>
+		<input type="tel" id="tel" placeholder="xxx-xxx-xxxx">
+		<br>
+		<label for="password">Password</label>
+		<input type="password" required id="password" placeholder="passwordd">
+		<br>
+		<label for="tos" >i agree to the TOS</label>
+		<input type="checkbox" required id="tos">
+		
+
+	</form>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
 
 </body>
+	
 
 </html>
