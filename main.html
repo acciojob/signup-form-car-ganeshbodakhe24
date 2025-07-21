@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Registration Form</title>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
 </head>
 <body>
-	<div class="container">
-		<h2>Registration Form</h2>
-		<form method="post">
-			<label for="name">Name</label>
-			<input type="text" name="name" id="name" required placeholder="Name">
 
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email" required placeholder="Email">
+  <form method="post">
+    
+    <!-- Name -->
+    <label for="name">Name</label>
+    <input type="text" required id="name" name="name" placeholder="Name">
+    <br><br>
 
-			<label>Gender</label>
-			<div class="gender-options">
-				<label for="gender_m"><input name="gender" type="radio" value="male" id="gender_m"> Male</label>
-				<label for="gender_f"><input name="gender" type="radio" value="female" id="gender_f"> Female</label>
-			</div>
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input type="email" required id="email" name="email" placeholder="Email">
+    <br><br>
 
-			<label for="cars">Car Brand</label>
-			<select name="cars" id="cars" required>
-				<option value="">--please choose an option--</option>
-				<option value="bugatti">Bugatti</option>
-				<option value="tesla">Tesla</option>
-				<option value="bmw">BMW</option>
-				<option value="audi">Audi</option>
-			</select>
+    <!-- Gender -->
+    <label>Gender</label><br>
+    <input type="radio" required id="gender_m" name="gender" value="male">
+    <label for="gender_m">Male</label>
+    <input type="radio" required id="gender_f" name="gender" value="female">
+    <label for="gender_f">Female</label>
+    <br><br>
 
-			<label for="age">Age</label>
-			<input type="number" name="age" id="age" required placeholder="Age">
+    <!-- Car Brands -->
+    <label for="cars">Car Brands</label>
+    <select id="cars" name="cars" required>
+      <option value="">--Please choose an option--</option>
+      <option value="bugatti">Bugatti</option>
+      <option value="tesla">Tesla</option>
+      <option value="bmw">BMW</option>
+      <option value="audi">Audi</option>
+    </select>
+    <br><br>
 
-			<label for="dob">Date of Birth</label>
-			<input type="date" name="dob" id="dob" required>
+    <!-- Age -->
+    <label for="age">Age</label>
+    <input type="number" required id="age" name="age" placeholder="Age">
+    <br><br>
 
-			<label for="tel">Phone Number</label>
-			<input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <!-- DOB -->
+    <label for="dob">DOB</label>
+    <input type="date" required id="dob" name="dob">
+    <br><br>
 
-			<label for="password">Password</label>
-			<input type="password" name="password" id="password" required placeholder="Password">
+    <!-- Phone Number -->
+    <label for="tel">Phone Number</label>
+    <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+    <br><br>
 
-			<label><input type="checkbox" name="tos" id="tos" required> I agree to the Terms of Service</label>
+    <!-- Password -->
+    <label for="password">Password</label>
+    <input type="password" required id="password" name="password" placeholder="Password">
+    <br><br>
 
-			<button type="submit">Submit</button>
-		</form>
-	</div>
+    <!-- TOS Checkbox -->
+    <input type="checkbox" required id="tos" name="tos">
+    <label for="tos">I agree to the TOS</label>
+    <br><br>
 
-	<script src="script.js"></script>
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+
+  </form>
+
 </body>
 </html>
